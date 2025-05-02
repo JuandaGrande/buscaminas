@@ -63,4 +63,12 @@ Tomamos la decisión como equipo de que el tablero sea generado de manera distin
 ¿Cómo hacer que el tablero se genere de manera aleatoria cada vez que se inicia una partida?
 Utilizamos la librería random para crear 4, 9 o 15 valores dependiendo de la dificultad elegida, con estos valores, calculamos sus posiciones en el apartado 3 de la función generar_tablero y cambiamos los valores en las posiciones de 0 a M, para indicar la presencia de una mina.
 
+### Indicadores de minas
+
+Como ahora el tablero es aleatorio necesitamos una manera de generar las indicaciones de cuando una casilla tiene una mina adyacente en las 8 direcciones, para eso usamos el apartado 1 de la función indicadores_minas, que indica la posición de la mina en términos (x,y). Ahora miramos en apartado 2 y 3, que revisa las 9 posiciones en un cuadrado 3x3, si no se está revisando la misma mina (4), se suma uno a la celda utilizando el apartado 5, y se itera con todas las posiciones del cuadrado 3x3 correspondiente a cada mina.
+
+### (Por resolver) Legibilidad del tablero
+
+El tablero se imprime de manera correcta, pero las diferencias en tamaños de los caracteres, las columnas no son rectas, por lo que la legibilidad se ve comprometida.
+
 ## Conclusiones
