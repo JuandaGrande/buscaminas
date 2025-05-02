@@ -57,7 +57,7 @@ Guardar al finalizar la partida ese tiempo. Mostrar el top 3 de partidas ganadas
 
 ## Problemas encontrados
 
-# Randomizar el tablero
+### Randomizar el tablero
 
 Tomamos la decisión como equipo de que el tablero sea generado de manera distinta cada vez, esto, para evitar que el jugador se aprenda el tablero y mejore sus tiempos con base en este conocimiento previo del tablero; lo cual nos llevó al primer problema que encontramos:
 ¿Cómo hacer que el tablero se genere de manera aleatoria cada vez que se inicia una partida?
