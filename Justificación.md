@@ -67,8 +67,13 @@ Utilizamos la librería random para crear 4, 9 o 15 valores dependiendo de la di
 
 Como ahora el tablero es aleatorio necesitamos una manera de generar las indicaciones de cuando una casilla tiene una mina adyacente en las 8 direcciones, para eso usamos el apartado 1 de la función indicadores_minas, que indica la posición de la mina en términos (x,y). Ahora miramos en apartado 2 y 3, que revisa las 9 posiciones en un cuadrado 3x3, si no se está revisando la misma mina (4), se suma uno a la celda utilizando el apartado 5, y se itera con todas las posiciones del cuadrado 3x3 correspondiente a cada mina.
 
-### (Por resolver) Legibilidad del tablero
+### Legibilidad del tablero
 
 El tablero se imprime de manera correcta, pero las diferencias en tamaños de los caracteres, las columnas no son rectas, por lo que la legibilidad se ve comprometida.
+Optamos por imprimir espacios entre cada caracter para garantizar que estén ordenados, adicional, añadimos indicadores de finlas y de columnas para que el jugador las ingrese.
+Añadimos un nuevo tablero con las entradas ocultas, utilizando el caracter ■.
+
+### Guardar las partidas
+bla
 
 ## Conclusiones
