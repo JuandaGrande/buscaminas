@@ -18,7 +18,7 @@ El id_usuario puede generarse automáticamente (por ejemplo, usando la librería
 ### Dificultades definidas:
 Definir los niveles de dificultad del juego:
 “Easy”, “Medium”, “Expert”.
-Para cada nivel definir el tablero de juego, (predeterminado en el código):
+Para cada nivel definir el tablero de juego, (aleatorio):
 
 Easy: Tamaño del tablero 6x6 y 4 bombas.
 
@@ -37,7 +37,7 @@ El usuario debe poder elegir el nivel antes de empezar.
 
 El nombre del jugador y su puntaje deben registrarse como “nombre_usuario”,
 “puntaje”, “nivel de dificultad” y si fue una partida ganada o pérdida. Si al guardar un
-nuevo store ya existe para ese usuario y nivel un registro actualizar.
+nuevo store ya existe para ese usuario y nivel un registro remplazar.
 
 ## Casos de uso a implementar:
 ### 1. Registrar un nuevo usuario.
@@ -53,7 +53,7 @@ Validar que la celda indicada sea válida y que no haya sido ingresada anteriorm
 ## Bono:
 ### 1. Imprimir partidas de un usuario en un formato legible.
 ### 2. Usar la librería time para medir cuánto tiempo tomó la partida. 
-Guardar al finalizar la partida ese tiempo. Mostrar el top 3 de partidas ganadas del nivel HARD ordenados por tiempo
+Guardar al finalizar la partida ese tiempo. Mostrar el top 3 de partidas en HARD ordenadas por puntaje
 
 ## Problemas encontrados
 
@@ -70,11 +70,11 @@ Como ahora el tablero es aleatorio necesitamos una manera de generar las indicac
 ### Legibilidad del tablero
 
 El tablero se imprime de manera correcta, pero las diferencias en tamaños de los caracteres, las columnas no son rectas, por lo que la legibilidad se ve comprometida.
-Optamos por imprimir espacios entre cada caracter para garantizar que estén ordenados, adicional, añadimos indicadores de finlas y de columnas para que el jugador las ingrese.
+Optamos por imprimir espacios entre cada caracter para garantizar que estén ordenados, adicional, añadimos indicadores de filas y de columnas para que el jugador las ingrese.
 Añadimos un nuevo tablero con las entradas ocultas, utilizando el caracter ■.
 
 ### Guardar las partidas
-(...)
+El principal problema fue comparar con partidas previas el intento actual para determinar si era apto para ser guardado. Para esto, se tomó la decisión de guardad únicamente la partida, por dificultad, de mayor puntaje de cada jugador. Esto se evalua y guarda en el último apartado de la función iniciar_partida.
 
 ## Conclusiones
 
@@ -87,4 +87,12 @@ El uso de modularidad es clave para el funcionamiento del programa, la legibilid
 El uso de listas facilita el registro, actualización y búsqueda de datos, permite ordenar de manera fácil la información y disponerla de manera rápida y efectiva.
 
 ### Estructuras de control
-(...)
+(...)  
+
+### Limitaciones
+
+Es posible, accediendo a funciones y operadores más avanzados, hacer el programa más eficiente. Sin embargo, se puede demostrar que utilizando solo Listas, vectores y matrices, estructuras de control y condicionalidad se puede lograr un resultado satisfactorio.  
+
+### Memoria permanente
+
+La carencia de un metodo de guardado de información hace que, cada vez que el programa se ejecute, se pierda la información previemente ingresada. Para progamas que requieran de actualización con el tiempo, no es una manera óptima de tratar los datos.
