@@ -74,6 +74,17 @@ Optamos por imprimir espacios entre cada caracter para garantizar que estén ord
 Añadimos un nuevo tablero con las entradas ocultas, utilizando el caracter ■.
 
 ### Guardar las partidas
-bla
+(...)
 
 ## Conclusiones
+
+### Modularidad
+
+El uso de modularidad es clave para el funcionamiento del programa, la legibilidad y la resolución de problemas en el código. Así mismo, ayuda a que los comentarios al código sean claros y concisos
+
+### Listas
+
+El uso de listas facilita el registro, actualización y búsqueda de datos, permite ordenar de manera fácil la información y disponerla de manera rápida y efectiva.
+
+### Estructuras de control
+(...)
